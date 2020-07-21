@@ -1,1 +1,1 @@
-# scripts
+# scripts and configs
