@@ -1,0 +1,4 @@
+set completion-ignore-case On
+# Use <up> and <down> to search based on what was already typed
+"\e[A": history-search-backward
+"\e[B": history-search-forward
