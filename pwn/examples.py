@@ -3,14 +3,11 @@
 *send one line*
 io.sendline("")
 
-
 *rec until* 
 io.recvuntil("")
 
-
 *output for debug*
 info("")
-
 
 *recv canary*
 io.recvuntil("string")
