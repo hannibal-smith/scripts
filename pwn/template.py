@@ -15,4 +15,5 @@ io = process(io.path)
 
 payload = ""
 
+io.sendline(payload)
 io.interactive()
