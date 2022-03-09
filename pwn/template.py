@@ -6,12 +6,14 @@ context(terminal=['tmux', 'splitw', '-h'])
 #set information level to debug
 context.log_level = 'debug'
 
-#TODO: replace <ELF-FILENMAE> with name of elf-file
-io = context.binary = ELF('<ELF-FILENAME>')
-
-# start in gdb or not
-#io = gdb.debug(io.path)
-io = process(io.path)
+if args.REMOTE:
+    io = remote("IP", 9999)
+else:
+    io = context.binary = ELF('ELF')
+    if args.GDB:
+            io = gdb.debug(io.path) 
+    else:
+            io =process(io.path)
 
 payload = ""
 
